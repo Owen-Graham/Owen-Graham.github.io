@@ -1,0 +1,17 @@
+title: Owen Graham
+description: AI-Assisted Projects & Technical Blog
+url: "https://owen-graham.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Author info
+author:
+  name: Owen Graham
+  email: your-email@example.com
+
+# Blog settings
+show_excerpts: true

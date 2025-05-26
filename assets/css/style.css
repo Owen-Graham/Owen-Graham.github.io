@@ -1,0 +1,39 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+article header {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+code {
+    background: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
