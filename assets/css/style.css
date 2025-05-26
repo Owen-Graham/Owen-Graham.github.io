@@ -1,13 +1,13 @@
-
+/* Washed Teal & Warm Gray Theme */
 :root {
-    --primary-color: #007AFF;
-    --text-primary: #1d1d1f;
-    --text-secondary: #86868b;
-    --background: #ffffff;
-    --card-background: #f5f5f7;
-    --border-light: #e5e5e7;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --primary-color: #7BA7A3;
+    --text-primary: #4F5856;
+    --text-secondary: #6B7472;
+    --background: #FEFFFE;
+    --card-background: #F7F9F8;
+    --border-light: #E7ECEA;
+    --shadow: 0 4px 20px rgba(123, 167, 163, 0.14);
+    --shadow-hover: 0 8px 40px rgba(123, 167, 163, 0.20);
     --radius: 12px;
     --radius-large: 20px;
 }
@@ -226,9 +226,9 @@ a:hover {
 }
 
 .colab-badge:hover {
-    background: #0056d3;
+    background: #689490;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(123, 167, 163, 0.3);
 }
 
 /* About section */
