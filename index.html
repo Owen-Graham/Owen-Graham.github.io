@@ -3,17 +3,23 @@ layout: default
 ---
 
 <h2>Recent Posts</h2>
-<ul>
+<ul class="post-list">
 {% for post in site.posts %}
     <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small> - {{ post.date | date: "%B %d, %Y" }}</small>
-        {% if post.excerpt %}
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        {% endif %}
+        <div class="post-card">
+            <a href="{{ post.url }}">
+                <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+                <h3 class="post-title">{{ post.title }}</h3>
+                {% if post.excerpt %}
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                {% endif %}
+            </a>
+        </div>
     </li>
 {% endfor %}
 </ul>
 
-<h2>About</h2>
-<p>I'm Owen Graham, and I build projects with AI assistance. This blog documents my technical experiments, challenges, and solutions in mapping, data parsing, and other development work.</p>
+<div class="about-section">
+    <h2>About</h2>
+    <p>I'm Owen Graham, and I build projects with AI assistance. This blog documents my technical experiments, challenges, and solutions in mapping, data parsing, and other development work.</p>
+</div>
