@@ -1,6 +1,4 @@
-# Update your stylesheet
-cat > assets/css/style.css << 'EOF'
-/* Modern Apple-inspired design */
+
 :root {
     --primary-color: #007AFF;
     --text-primary: #1d1d1f;
@@ -274,4 +272,3 @@ a:hover {
         font-size: 28px;
     }
 }
-EOF
