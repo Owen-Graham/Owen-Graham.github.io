@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Isochrones for home location selection"
+date: 2025-05-26
+---
+
+# Building Multi-Criteria Location Analysis with Open Source Tools
+
+Finding the perfect place to live involves balancing multiple factors: proximity to work, schools, healthcare, and amenities. Instead of manually checking each location, I built an automated system to map areas that satisfy multiple criteria simultaneously using free, open-source tools.
+
+## The Tool Stack
+
+**OpenRouteService API** served as our routing engine, generating isochrones—map areas reachable within specific time limits using different transport modes (walking, cycling, driving). With a free tier of 2,000 requests daily, it's accessible for personal projects.
+
+**Overpass API** provided the location data by querying OpenStreetMap's extensive database. We used it to find coordinates for supermarkets, schools, hospitals, and other amenities across entire countries. The query language is powerful enough to distinguish between Woolworths and Coles stores, or find specific facility types like athletics tracks.
+
+**Python libraries** tied everything together: Folium created interactive maps with layer controls, Shapely handled geometric operations for finding intersections between different isochrones, and standard libraries managed API calls and data processing.
+
+## The Process
+
+The system works by: (1) querying Overpass API to find all relevant locations (e.g., "all hospitals in Australia"), (2) creating isochrones around each location using OpenRouteService, (3) finding geometric intersections where multiple criteria overlap, and (4) generating interactive maps with toggleable layers.
+
+For example, finding areas within 1-hour drive of both a Woolworths and a school produces a map showing only regions satisfying both criteria. Users can toggle different combinations to see areas meeting 1, 2, or all specified requirements.
+
+## Limitations and Alternatives
+
+We discovered that approximating public transport using driving isochrones creates unrealistic circular coverage patterns, since rail networks follow linear corridors. For accurate transit analysis, alternatives include GTFS data with OpenTripPlanner (complex but accurate), Google Maps API (simple but costly at scale), or building custom graph algorithms following actual rail networks.
+
+The open-source approach proves viable for continental-scale analysis while remaining accessible to individual researchers and decision-makers.
+
+## Next Steps
+
+- Productionalise the process. I think 
