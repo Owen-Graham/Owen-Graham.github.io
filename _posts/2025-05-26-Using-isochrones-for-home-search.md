@@ -3,6 +3,7 @@ layout: post
 title: "Isochrones for home location selection"
 date: 2025-05-26
 ---
+<img src="/assets/images/Example_Isochrone.png" alt="Example I ran in my notebook for Busselton, WA." width="1000">
 
 # Building Multi-Criteria Location Analysis with Open Source Tools
 
